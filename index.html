@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ateliê Verano - Loja de Roupas</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header-container">
+      <h1 class="logo">Ateliê Verano</h1>
+      <nav class="nav">
+        <input type="text" id="search" placeholder="Buscar produto..." />
+        <button id="dark-mode-toggle">🌙</button>
+        <div class="cart">
+          🛒 <span id="cart-count">0</span>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="welcome-message">
+    <h2>Bem-vindo(a) à Ateliê Verano ✨</h2>
+    <p>Encontre o seu estilo perfeito!</p>
+  </section>
+
+  <section class="filters container">
+    <select id="category-filter">
+      <option value="">Todas as categorias</option>
+      <option value="men's clothing">Masculino</option>
+      <option value="women's clothing">Feminino</option>
+    </select>
+
+    <select id="price-filter">
+      <option value="">Ordenar por preço</option>
+      <option value="asc">Menor preço</option>
+      <option value="desc">Maior preço</option>
+    </select>
+  </section>
+
+  <!-- Modal do Carrinho -->
+  <div id="cart-modal" class="modal hidden">
+    <div class="modal-content">
+      <span id="close-modal" class="close">&times;</span>
+      <h2>Seu Carrinho</h2>
+      <ul id="cart-items" style="list-style:none; padding-left:0; max-height:300px; overflow-y:auto; margin-bottom:20px;"></ul>
+      <p id="cart-total" style="font-weight:bold;">Total: R$ 0,00</p>
+      <button
+        id="checkout-btn"
+        style="background:#5cb85c; color:#fff; border:none; padding:10px 15px; border-radius:5px; cursor:pointer;"
+      >
+        Finalizar Compra
+      </button>
+    </div>
+  </div>
+
+  <main class="products container" id="products">
+    <!-- Produtos vão ser carregados aqui via JavaScript -->
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Ateliê Verano © 2025 - Todos os direitos reservados</p>
+    </div>
+  </footer>
+
+  <script src="./js/app.js"></script>
+</body>
+</html>
